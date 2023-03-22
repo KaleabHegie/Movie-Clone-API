@@ -1,8 +1,8 @@
 function fun() {
 
-    var mostpopular = `https://imdb-api.com/API/MostPopularMovies/k_y5wpf6jf`;
-    var boxoffice = `https://imdb-api.com/en/API/BoxOffice/k_y5wpf6jf`;
-    var intheaters = `https://imdb-api.com/en/API/InTheaters/k_y5wpf6jf`;
+    var mostpopular = `https://imdb-api.com/API/MostPopularMovies/k_8v3u2v40`;
+    var boxoffice = `https://imdb-api.com/en/API/BoxOffice/k_8v3u2v40`;
+    var intheaters = `https://imdb-api.com/en/API/InTheaters/k_8v3u2v40`;
 
 
 
@@ -17,7 +17,7 @@ function fun() {
 
 
 
-            for (var i = 0; i < 1; i++) {
+            for (var i = 0; i < 12; i++) {
 
                 var main = `
         <div id="card" class="card border-0 col-lg-2 col-md-3 col-sm-4 col-6">
@@ -42,7 +42,7 @@ function fun() {
 
 
 
-            for (var i = 0; i < 1; i++) {
+            for (var i = 0; i < 12; i++) {
 
                 var main = `
         <div id="card" class="card border-0 col-lg-2 col-md-3 col-sm-4 col-6">
@@ -67,7 +67,7 @@ function fun() {
 
 
 
-            for (var i = 0; i < 1; i++) {
+            for (var i = 0; i < 12; i++) {
 
                 var main = `
         <div id="card" class="card border-0 col-lg-2 col-md-3 col-sm-4 col-6">
