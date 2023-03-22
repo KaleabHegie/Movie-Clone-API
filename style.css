@@ -1,6 +1,10 @@
-.body{
-    background-color:  #211e1f;
-    margin-top: 0;
+.top{
+  background-color: #211e1f;
+}
+#card{
+  background-color:#211e1f;
+  color:white;
+  margin-bottom: 10px; 
 }
 .navbar .container ul li{
     list-style:none;
@@ -25,13 +29,19 @@
 }
 .card {
   overflow: hidden;
+  border: none;
 }
 
 .card img {
   width: 100%;
   transition: 0.5s all ease-in-out;
 }
+button{
+  border: none;
+  margin: 0;
+  padding: 0;
+}
 
-.card:hover img {
-  transform: scale(1.2);
+button:hover img {
+  transform: scale(1.05);
 }
