@@ -1,8 +1,8 @@
 function fun() {
 
-    var mostpopular = `https://imdb-api.com/API/MostPopularMovies/k_8v3u2v40`;
-    var boxoffice = `https://imdb-api.com/en/API/BoxOffice/k_8v3u2v40`;
-    var intheaters = `https://imdb-api.com/en/API/InTheaters/k_8v3u2v40`;
+    var mostpopular = `https://imdb-api.com/API/MostPopularMovies/k_zraqfvt4`;
+    var boxoffice = `https://imdb-api.com/en/API/BoxOffice/k_zraqfvt4`;
+    var intheaters = `https://imdb-api.com/en/API/InTheaters/k_zraqfvt4`;
 
 
 
@@ -33,7 +33,6 @@ function fun() {
 
         })
         .catch(error => console.error("error"))
-
 
 
         fetch(boxoffice)
@@ -97,7 +96,7 @@ function getMoies() {
 
     var src = document.querySelector("#search");
 
-    
+
 
 
     document.querySelector(".Most_Popular").innerHTML = '';
@@ -112,7 +111,7 @@ function getMoies() {
     fetch(movieSearch)
         .then(response => response.json())
         .then(Newdata => {
-            for (var i = 0; i < Newdata.results.length; i++) {
+            for (var i = 0; i < 12; i++) {
                 var card =
                     `<div id="card" class="card border-0 col-lg-2 col-md-3 col-sm-4 col-6">
                 <button onclick="getId(this.value)" src="detail.html" style = "background-color:#211e1f" value="${Newdata.results[i].id} ">
@@ -136,8 +135,8 @@ function getMoies() {
 
 function getId(a) {
 
-    
-  
+
+
 
 
     var identiti = `https://imdb-api.com/en/API/Title/k_zraqfvt4/${a}`;
@@ -164,7 +163,7 @@ function getId(a) {
             <button class="btn btn-danger" style="margin-bottom: 20px;"> Watch Now </button>
             <h2>${data.fullTitle}</h2>
             <p>${data.plot}</p>
-            <button class="btn btn-light"> Teailer </button>
+            <button onclick="trailer(this.value)" value="${data.id}" class="btn btn-light"> Teailer </button>
             <button class="btn btn-success"> HD </button>
             <ul style="list-style: none;">
                 <li style="padding: 10px;">Relesed: ${data.releasedDate} </li>
@@ -179,7 +178,7 @@ function getId(a) {
           </div>
       </div>`
 
-      
+
             x.innerHTML = dis;
 
 
@@ -191,3 +190,36 @@ function getId(a) {
 }
 
 
+function trailer(b) {
+    var identiti = `https://imdb-api.com/en/API/Trailer/k_zraqfvt4/${b}`;
+
+
+    var searchNew = document.querySelector(".searchNew");
+    document.querySelector(".searchNew").innerHTML = "";
+    var con = document.querySelector(".con");
+
+
+
+
+    fetch(identiti)
+        .then(response => response.json())
+        .then(data => {
+
+            con.style = `background-image:url(images/backgroun.jpg) ; opacity:0.7; image-size:cover;background-repeat: no-repeat;background-size: cover; `;
+
+
+            con.innerHTML = `
+                   <div class="container">
+                   <div class="row justify-content-center" style="padding-top:80px;">
+                   <div class="col-lg-8">
+                   <iframe src="${data.linkEmbed}" width="100%" height="500px" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" frameborder="no" scrolling="no"></iframe>
+                   <div> <div> <div>`;
+
+
+
+
+        })
+        .catch(error => console.error(error))
+
+
+}
