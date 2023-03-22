@@ -1,6 +1,5 @@
-function fun() {
-
-    var key='k_8v3u2v40'
+var key='k_a72ak0q3'
+function fun() {    
     var mostpopular = `https://imdb-api.com/API/MostPopularMovies/${key}`;
     var boxoffice = `https://imdb-api.com/en/API/BoxOffice/${key}`;
     var intheaters = `https://imdb-api.com/en/API/InTheaters/${key}`;
@@ -33,7 +32,7 @@ function fun() {
 
 
         })
-        .catch(error => console.error("error"))
+        .catch(error => console.error(error))
 
 
         fetch(boxoffice)
@@ -57,7 +56,7 @@ function fun() {
 
 
         })
-        .catch(error => console.error("error"))
+        .catch(error => console.error(error))
 
 
 
@@ -82,7 +81,7 @@ function fun() {
 
 
         })
-        .catch(error => console.error("error"))
+        .catch(error => console.error(error))
 
 }
 
@@ -123,7 +122,7 @@ function getMoies() {
                 searchNew.innerHTML += card;
             }
         })
-        .catch(console.error("error"))
+        .catch(error => console.error(error))
 }
 
 
