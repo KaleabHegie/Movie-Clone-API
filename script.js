@@ -1,8 +1,9 @@
 function fun() {
 
-    var mostpopular = `https://imdb-api.com/API/MostPopularMovies/k_zraqfvt4`;
-    var boxoffice = `https://imdb-api.com/en/API/BoxOffice/k_zraqfvt4`;
-    var intheaters = `https://imdb-api.com/en/API/InTheaters/k_zraqfvt4`;
+    var key='k_8v3u2v40'
+    var mostpopular = `https://imdb-api.com/API/MostPopularMovies/${key}`;
+    var boxoffice = `https://imdb-api.com/en/API/BoxOffice/${key}`;
+    var intheaters = `https://imdb-api.com/en/API/InTheaters/${key}`;
 
 
 
@@ -105,7 +106,7 @@ function getMoies() {
 
 
 
-    var movieSearch = `https://imdb-api.com/en/API/SearchMovie/k_zraqfvt4/${src.value}`;
+    var movieSearch = `https://imdb-api.com/en/API/SearchMovie/${key}/${src.value}`;
 
 
     fetch(movieSearch)
@@ -139,7 +140,7 @@ function getId(a) {
 
 
 
-    var identiti = `https://imdb-api.com/en/API/Title/k_zraqfvt4/${a}`;
+    var identiti = `https://imdb-api.com/en/API/Title/${key}/${a}`;
     var x = document.querySelector(".body");
     var top = document.querySelector(".top");
     fetch(identiti)
@@ -191,7 +192,7 @@ function getId(a) {
 
 
 function trailer(b) {
-    var identiti = `https://imdb-api.com/en/API/Trailer/k_zraqfvt4/${b}`;
+    var identiti = `https://imdb-api.com/en/API/Trailer/${key}/${b}`;
 
 
     var searchNew = document.querySelector(".searchNew");
@@ -210,7 +211,7 @@ function trailer(b) {
 
             con.innerHTML = `
                    <div class="container">
-                   <div class="row justify-content-center" style="padding-top:80px;">
+                   <div class="row justify-content-center" style="padding-top:50px;">
                    <div class="col-lg-8">
                    <iframe src="${data.linkEmbed}" width="100%" height="500px" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" frameborder="no" scrolling="no"></iframe>
                    <div> <div> <div>`;
